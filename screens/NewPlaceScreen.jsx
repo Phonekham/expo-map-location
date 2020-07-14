@@ -8,11 +8,16 @@ import {
   Button,
 } from "react-native";
 import Colors from "../constants/Colors";
+import { useDispatch } from "react-redux";
+
+import * as placesActions from "../store/places-actions";
 
 const NewPlaceScreen = () => {
   const [titleValue, setTitleValue] = useState("");
   const [selectedImage, setSelectedImage] = useState();
   const [selectedLocation, setSelectedLocation] = useState();
+
+  const dispatch = useDispatch();
 
   const titleChangeHandler = (text) => {
     // you could add validation
@@ -20,7 +25,7 @@ const NewPlaceScreen = () => {
   };
 
   const savePlaceHandler = () => {
-    console.log("save");
+    dispatch(placesActions.addPlace(titleValue));
   };
 
   return (
