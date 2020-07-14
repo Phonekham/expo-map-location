@@ -1,14 +1,18 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 const NewPlaceScreen = () => {
-    return (
-      <View>
-        <Text>NewPlaceScreen</Text>
-      </View>
-    );
-}
+  return (
+    <View>
+      <Text>NewPlaceScreen</Text>
+    </View>
+  );
+};
 
-export default NewPlaceScreen
+NewPlaceScreen.navigationOptions = {
+  headerTitle: "Add Place",
+};
 
-const styles = StyleSheet.create({})
+export default NewPlaceScreen;
+
+const styles = StyleSheet.create({});
