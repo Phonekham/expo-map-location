@@ -12,7 +12,6 @@ export default (state = initialState, action) => {
       return {
         places: state.places.concat(newPlace),
       };
-
     default:
       return state;
   }
