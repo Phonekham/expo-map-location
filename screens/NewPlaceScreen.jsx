@@ -25,8 +25,12 @@ const NewPlaceScreen = () => {
     setTitleValue(text);
   };
 
+  const imageTakenHandler = (imagePath) => {
+    setSelectedImage(imagePath);
+  };
+
   const savePlaceHandler = () => {
-    dispatch(placesActions.addPlace(titleValue));
+    dispatch(placesActions.addPlace(titleValue, selectedImage));
   };
 
   return (
@@ -38,7 +42,7 @@ const NewPlaceScreen = () => {
           onChangeText={titleChangeHandler}
           value={titleValue}
         />
-        <ImagePicker></ImagePicker>
+        <ImagePicker onImageTaken={imageTakenHandler}></ImagePicker>
         <Button
           title="Save Place"
           color={Colors.primary}
