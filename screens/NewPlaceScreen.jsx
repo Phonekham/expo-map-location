@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import * as placesActions from "../store/places-actions";
 import ImagePicker from "../components/ImagePicker";
 
-const NewPlaceScreen = () => {
+const NewPlaceScreen = (props) => {
   const [titleValue, setTitleValue] = useState("");
   const [selectedImage, setSelectedImage] = useState();
   const [selectedLocation, setSelectedLocation] = useState();
